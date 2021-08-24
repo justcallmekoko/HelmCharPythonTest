@@ -3,12 +3,12 @@ entries:
   helm-char-python-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-08-24T22:24:00.68801868+01:00"
+    created: "2021-08-24T23:26:13.973040351+01:00"
     description: A Helm chart for Kubernetes
-    digest: 3d089b88afe4fd95b076fd71ba4fe08fe577494144c2485b4d3aa6897e6bc106
+    digest: ca60ed538e33ed4d901a367b105da588fa9251b160b08c278e7dd77c54bbecce
     name: helm-char-python-test
     type: application
     urls:
     - https://justcallmekoko.github.io/HelmCharPythonTest/helm-char-python-test-0.1.0.tgz
     version: 0.1.0
-generated: "2021-08-24T22:24:00.686721604+01:00"
+generated: "2021-08-24T23:26:13.971836664+01:00"

@@ -4,3 +4,5 @@ image:
   repository: "justcallmekoko/python-app"
   pullPolicy: IfNotPresent
   tag: "latest"
+
+port: 12345

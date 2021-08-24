@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-test-app
+  labels:
+    app: python-test-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: python-test-app
+  template:
+    metadata:
+      labels:
+        app: python-test-app
+    spec:
+      containers:
+        - name: python-test-container
+          image: {{ .Values.image.name }}

@@ -20,6 +20,6 @@ spec:
           env:
           - name: "PORT"
             valueFrom:
-             secretKeyRef:
-               key: port
-               name: {{ .Release.Name }}-auth
+              secretKeyRef:
+                key: port
+                name: {{ .Release.Name }}-auth

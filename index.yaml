@@ -4,9 +4,9 @@ entries:
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2021-08-24T22:07:20.059811884+01:00"
-    description: A Helm chart for Kubernetes
+    description: A Helm chart for Python deployment tests
     digest: fc4a8dbd1caab448284f071a193d9518504f40e7ec1f23de8b08f89d5929367f
-    name: helm-char-python-test
+    name: Helm Char Python Test
     type: application
     urls:
     - https://justcallmekoko.github.io/HelmCharPythonTest/helm-char-python-test-0.1.0.tgz

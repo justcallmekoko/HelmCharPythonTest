@@ -1,6 +1,6 @@
 replicaCount: 1
 
 image:
-  name: justcallmekoko/python-test-app
+  repository: "justcallmekoko/python-app"
   pullPolicy: IfNotPresent
   tag: "latest"

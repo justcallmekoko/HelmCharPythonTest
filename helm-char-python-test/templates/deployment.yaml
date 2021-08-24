@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: python-test-container
-          image: {{ .Values.image.name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

@@ -18,5 +18,5 @@ spec:
         - name: python-test-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           env:
-          - name: "PORT"
-            value: {{ .Values.port }}
+          - name: PORT
+            value: "{{ .Values.port }}"

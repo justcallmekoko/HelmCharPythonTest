@@ -17,9 +17,6 @@ spec:
       containers:
         - name: python-test-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-#          env:
-#          - name: "PORT"
-#            valueFrom:
-#              secretKeyRef:
-#                key: port
-#                name: {{ .Release.Name }}-auth
+          env:
+          - name: "PORT"
+            value: {{ .Values.port }}

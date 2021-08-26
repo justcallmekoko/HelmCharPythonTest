@@ -1,0 +1,37 @@
+### DOCKER INSTRUCTIONS 
+
+# Install docker
+apt-install docker.io -y
+
+# Login to docker
+docker login
+
+# Setup buildx
+export DOCKER_BUILDKIT=1
+docker build --platform=local -o . git://github.com/docker/buildx
+mkdir -p ~/.docker/cli-plugins
+mv buildx ~/.docker/cli-plugins/docker-buildx
+
+# Create an arm64 based builder for docker
+docker buildx create --name armbuilder --platform arm64
+
+# Use the arm64 based builder
+docker buildx use armbuilder
+
+# Setup the bootstrap
+docker buildx inspect --bootstrap
+
+# Reset qemu archs
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+
+# Build the docker image
+docker buildx build --platform linux/arm64 -t justcallmekoko/python-app:latest --push .
+
+### HELM INSTRUCTIONS
+
+# Create a helm chart
+helm create helm-char-python-test
+
+# Remove some shit
+rm -f helm-char-python-test/templates/service.yaml
+rm -f HelmCharPythonTest/helm-char-python-test/templates/NOTES.txt
